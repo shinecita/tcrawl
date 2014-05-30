@@ -7,10 +7,14 @@ var c = new Crawler({
 
 // This will be called for each crawled page
 "callback":function(error,result, $) {
-      console.log("asd2", error)
+      
+      if (error) {
+        console.log("Error", error)
+        return;
+      }
     // $ is a jQuery instance scoped to the server-side DOM of the page
     $("a[href^='http://twitter.com/']").each(function(index , a) {
-        console.log("twitter user link", index,  a.href);
+        console.log(index , "twitter user link: ",  a.href);
     });
    }
 });
@@ -20,7 +24,7 @@ var c = new Crawler({
  prompt.start();
  
    prompt.get(['url'], function (err, result) {
-    console.log(err, result);
+    if (err) { return console.log(err)};
     c.queue(result.url);
   });
  

@@ -1,0 +1,9 @@
+ {
+  "name": "handler.js",
+  "version": "2.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "crawler": "0.2.5"
+  }
+}

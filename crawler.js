@@ -13,7 +13,8 @@ var c = new Crawler({
         return;
       }
     // $ is a jQuery instance scoped to the server-side DOM of the page
-    $("a[href^='http://twitter.com/']").each(function(index , a) {
+   // $("a[href^='http://twitter.com/']").each(function(index , a) {
+     $("a[href*='twitter.com/']").each(function(index , a) {
         console.log(index , "twitter user link: ",  a.href);
     });
    }

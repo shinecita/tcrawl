@@ -4,6 +4,7 @@
   "description": "",
   "main": "handler.js",
   "dependencies": {
-    "crawler": "0.2.5"
+    "crawler": "0.2.5",
+    "prompt" : "0.2.13"
   }
 }
